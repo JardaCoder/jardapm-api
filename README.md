@@ -40,6 +40,8 @@ e settes do Java são um belo exemplo de coisas que são praticamente deletadas 
 
 ## Como rodar
 
+<strong>Dentro da pasta Utils, vou deixar previamente disponibilizado o .jar da aplicação e um documento que pode ser importado no insomnia ou postman para testes </strong>
+
 Aqui a gente chega em um "problema" pois vai variar muito de acordo da forma que você deseja rodar, seja para alterar o código de fato ou apenas disponibilizar a aplicação
 localmente para ser consumida.
 
