@@ -16,6 +16,7 @@ simples onde você pode cadastrar um projeto, atividades para o mesmo estipuland
  ⚠️Projeto em andamento⚠️
 </h4>
 
+<br>
 
 ## Pré requisitos
 
@@ -37,6 +38,7 @@ e settes do Java são um belo exemplo de coisas que são praticamente deletadas 
 
 ---
 
+<br>
 
 ## Como rodar
 
@@ -54,7 +56,7 @@ A Aplicação vai criar o banco pra você, então não esquenta a cabeça.
 </h1>
 
 
-
+<br>
 
 <h2>Aqui vão algumas formas de rodar a aplicação, caso você deseja alterar o código:</h2>
 
@@ -71,7 +73,7 @@ e selecionar Debug/Run as Java Application.
 
 O processo parece complicado, mas é tranquilo 😄 
 
-
+<br>
 
 <h2>Caso você queira apenas disponibilizar localmente:</h2>
 
@@ -83,6 +85,7 @@ O processo parece complicado, mas é tranquilo 😄
 
 ---
 
+<br>
 
 ### Tecnologias
 
