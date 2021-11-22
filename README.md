@@ -68,6 +68,12 @@ No caso do eclipse é só abrir a IDE, acessar o menu File/Import... selecionar 
 Você consegue acompanhar vendo a barra de progresso pelo lado inferior direito, após finalizar tudo ( A primeira vez pode demorar um pouco,
 podemos considerar o Maven como se fosse o "node" de um projeto React/Angular, ele que vai gerenciar as dependências então vai ser necessário espear ele fazer os downloads).
 
+No projeto utilizamos a QueryDSL que nos ajuda a montar as querys com projectios, fazer filtros dinâmicos mais facilmente, no eclipse ele vai dar erros de import
+dessas classes que são geradas automaticamente, então você deve acessar src/main apertar com o botão direito na pasta "generated" e procurar por "Build path"
+e selecionar a opção "Use as Source Folder" 
+
+podemos considerar o Maven como se fosse o "node" de um projeto React/Angular, ele que vai gerenciar as dependências então vai ser necessário espear ele fazer os downloads).
+
 Após isso você pode rodar ele abrindo o package com.jardapm dando um click com o mouse 2 sobre a classe principal "JardaPmApiApplication" 
 e selecionar Debug/Run as Java Application.
 
