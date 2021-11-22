@@ -54,6 +54,12 @@ public class ProjectActivityController {
 	
 	@DeleteMapping("/{id}")
 	public ResponseEntity<Void> deleteById(@PathVariable Long id){
+		projectActivityService.disableById(id);
+		return ResponseEntity.noContent().build();
+	}
+	
+	@DeleteMapping("/permanent/{id}")
+	public ResponseEntity<Void> deletePermanentById(@PathVariable Long id){
 		projectActivityService.deleteProjectActivityById(id);
 		return ResponseEntity.noContent().build();
 	}

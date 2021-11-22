@@ -8,6 +8,8 @@ import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 
+import com.jardapm.domain.dto.ProjectDetailsDto;
+import com.jardapm.domain.dto.ProjectDto;
 import com.jardapm.domain.enums.Situation;
 import com.jardapm.domain.exception.BadRequestException;
 import com.jardapm.domain.exception.EntityInUseException;
@@ -23,6 +25,8 @@ public class ProjectService {
 	
 	@Autowired 
 	ProjectRepository projectRepository;
+	@Autowired 
+	ProjectActivityService projectActivityService;
 	
 	QProject qProject = QProject.project;
 	
@@ -66,5 +70,21 @@ public class ProjectService {
 
 	public boolean existsById(Long projectId) {
 		return projectRepository.existsById(projectId);
+	}
+
+	public List<ProjectDto> getProjectList() {
+		return projectRepository.listProjects(null);
+	}
+
+	public ProjectDetailsDto getProjectAndActivitiesById(Long projectId) {
+		
+		ProjectDetailsDto projectDetailsDto = new ProjectDetailsDto();
+		Project project = findById(projectId)
+				.orElseThrow(() -> new EntityNotFoundException(String.format("Projeto de código %d não existe" , projectId)));
+		
+		projectDetailsDto.setProject(project);
+		projectDetailsDto.setActivities(projectActivityService.findAllByProjectId(projectId));
+		
+		return projectDetailsDto;
 	}
 }

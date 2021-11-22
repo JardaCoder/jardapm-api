@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.jardapm.domain.dto.ProjectDetailsDto;
+import com.jardapm.domain.dto.ProjectDto;
 import com.jardapm.domain.exception.EntityNotFoundException;
 import com.jardapm.domain.model.Project;
 import com.jardapm.domain.service.ProjectService;
@@ -54,9 +56,24 @@ public class ProjectController {
 	
 	@DeleteMapping("/{id}")
 	public ResponseEntity<Void> deleteById(@PathVariable Long id){
+		projectService.disableById(id);
+		return ResponseEntity.noContent().build();
+	}
+	
+	@DeleteMapping("/permanent/{id}")
+	public ResponseEntity<Void> deletePermanentById(@PathVariable Long id){
 		projectService.deleteProjectById(id);
 		return ResponseEntity.noContent().build();
 	}
 	
+	@GetMapping("/list/dto")
+	public ResponseEntity<List<ProjectDto>> deleteById(){
+		return ResponseEntity.ok().body(projectService.getProjectList());
+	}
+	
+	@GetMapping("/details/{id}")
+	public ResponseEntity<ProjectDetailsDto> getProjectAndActivitiesById(@PathVariable("id") Long id){
+		return ResponseEntity.ok().body(projectService.getProjectAndActivitiesById(id));
+	}
 	
 }
