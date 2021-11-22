@@ -26,6 +26,8 @@ public class QProjectActivity extends EntityPathBase<ProjectActivity> {
 
     public final DatePath<java.time.LocalDate> finalDate = createDate("finalDate", java.time.LocalDate.class);
 
+    public final EnumPath<com.jardapm.domain.enums.YesNo> finished = createEnum("finished", com.jardapm.domain.enums.YesNo.class);
+
     //inherited
     public final NumberPath<Long> id = _super.id;
 

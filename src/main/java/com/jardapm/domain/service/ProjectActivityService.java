@@ -70,4 +70,8 @@ public class ProjectActivityService {
 			new BadRequestException("Não existe um projeto com o id informado.");
 		});
 	}
+
+	public List<ProjectActivity> findAllByProjectId(Long projectId) {
+		return projectActivitRepository.findAllByProjectId(projectId);
+	}
 }

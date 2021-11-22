@@ -4,6 +4,8 @@ import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.Index;
 import javax.persistence.JoinColumn;
@@ -11,6 +13,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+
+import com.jardapm.domain.enums.YesNo;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -36,6 +40,10 @@ public class ProjectActivity extends BaseEntity {
 	@NotNull
 	@Column(nullable = false)
 	private LocalDate finalDate;
+	
+	@Enumerated(EnumType.STRING)
+	@Column
+	private YesNo finished = YesNo.NO;
 	
 	@JoinColumn(name = "project_id", updatable = false, insertable = false)
 	@ManyToOne(fetch = FetchType.LAZY)
