@@ -20,7 +20,7 @@ simples onde você pode cadastrar um projeto, atividades para o mesmo estipuland
 
 ## Pré requisitos
 
-Este repositório contém apenas o back-end da aplicação que foi feita usando Java e Spring-Boot então você vai precisar de algumas ferramentas pré instaladas para rodar o projeto.
+Este repositório contém apenas o back-end (o front está [aqui](https://github.com/JardaCoder/painel-jardapm)) da aplicação que foi feita usando Java e Spring-Boot então você vai precisar de algumas ferramentas pré instaladas para rodar o projeto.
 
 - Instalar a JDK 11 em sua máquina;
 - Alguma IDE de sua preferência que dê suporte a Java ( eu uso o Eclipse mas pode ser uma de sua preferência, VS-code ou IntelliJ por exemplo);
